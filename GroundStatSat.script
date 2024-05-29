@@ -1,0 +1,311 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2024-05-28 15:17:39
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft GroundStatSat;
+GMAT GroundStatSat.DateFormat = A1Gregorian;
+GMAT GroundStatSat.Epoch = '15 Dec 2023 00:00:00.000';
+GMAT GroundStatSat.CoordinateSystem = EarthMJ2000Ec;
+GMAT GroundStatSat.DisplayStateType = Cartesian;
+GMAT GroundStatSat.X = 7100;
+GMAT GroundStatSat.Y = 517.1103026883578;
+GMAT GroundStatSat.Z = 1192.726680699964;
+GMAT GroundStatSat.VX = 0;
+GMAT GroundStatSat.VY = 7.141270312179305;
+GMAT GroundStatSat.VZ = -2.006180033891897;
+GMAT GroundStatSat.DryMass = 1.5;
+GMAT GroundStatSat.Cd = 2.2;
+GMAT GroundStatSat.Cr = 1.8;
+GMAT GroundStatSat.DragArea = 0.01;
+GMAT GroundStatSat.SRPArea = 0.01;
+GMAT GroundStatSat.SPADDragScaleFactor = 1;
+GMAT GroundStatSat.SPADSRPScaleFactor = 1;
+GMAT GroundStatSat.AtmosDensityScaleFactor = 1;
+GMAT GroundStatSat.ExtendedMassPropertiesModel = 'None';
+GMAT GroundStatSat.NAIFId = -10001001;
+GMAT GroundStatSat.NAIFIdReferenceFrame = -9001001;
+GMAT GroundStatSat.OrbitColor = Red;
+GMAT GroundStatSat.TargetColor = Teal;
+GMAT GroundStatSat.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT GroundStatSat.CdSigma = 1e+70;
+GMAT GroundStatSat.CrSigma = 1e+70;
+GMAT GroundStatSat.Id = 'SatId';
+GMAT GroundStatSat.Attitude = CoordinateSystemFixed;
+GMAT GroundStatSat.SPADSRPInterpolationMethod = Bilinear;
+GMAT GroundStatSat.SPADSRPScaleFactorSigma = 1e+70;
+GMAT GroundStatSat.SPADDragInterpolationMethod = Bilinear;
+GMAT GroundStatSat.SPADDragScaleFactorSigma = 1e+70;
+GMAT GroundStatSat.AtmosDensityScaleFactorSigma = 1e+70;
+GMAT GroundStatSat.ModelFile = 'aura.3ds';
+GMAT GroundStatSat.ModelOffsetX = 0;
+GMAT GroundStatSat.ModelOffsetY = 0;
+GMAT GroundStatSat.ModelOffsetZ = 0;
+GMAT GroundStatSat.ModelRotationX = 0;
+GMAT GroundStatSat.ModelRotationY = 0;
+GMAT GroundStatSat.ModelRotationZ = 0;
+GMAT GroundStatSat.ModelScale = 1;
+GMAT GroundStatSat.AttitudeDisplayStateType = 'Quaternion';
+GMAT GroundStatSat.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT GroundStatSat.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT GroundStatSat.EulerAngleSequence = '321';
+
+%----------------------------------------
+%---------- GroundStations
+%----------------------------------------
+
+Create GroundStation BroncoSpace;
+GMAT BroncoSpace.OrbitColor = Thistle;
+GMAT BroncoSpace.TargetColor = DarkGray;
+GMAT BroncoSpace.CentralBody = Mars;
+GMAT BroncoSpace.StateType = Cartesian;
+GMAT BroncoSpace.HorizonReference = Sphere;
+GMAT BroncoSpace.Location1 = -2468.405;
+GMAT BroncoSpace.Location2 = -4679.173;
+GMAT BroncoSpace.Location3 = 3551.167;
+GMAT BroncoSpace.Id = 'BroncoSpace';
+GMAT BroncoSpace.IonosphereModel = 'None';
+GMAT BroncoSpace.TroposphereModel = 'None';
+GMAT BroncoSpace.DataSource = 'Constant';
+GMAT BroncoSpace.Temperature = 295.1;
+GMAT BroncoSpace.Pressure = 1013.5;
+GMAT BroncoSpace.Humidity = 55;
+GMAT BroncoSpace.MinimumElevationAngle = 10;
+
+%----------------------------------------
+%---------- GroundStations
+%----------------------------------------
+
+Create GroundStation MountSac;
+GMAT MountSac.OrbitColor = Thistle;
+GMAT MountSac.TargetColor = DarkGray;
+GMAT MountSac.CentralBody = Earth;
+GMAT MountSac.StateType = Cartesian;
+GMAT MountSac.HorizonReference = Sphere;
+GMAT MountSac.Location1 = -2471.289;
+GMAT MountSac.Location2 = -4677.985;
+GMAT MountSac.Location3 = 3550.73;
+GMAT MountSac.Id = 'MountSac';
+GMAT MountSac.IonosphereModel = 'None';
+GMAT MountSac.TroposphereModel = 'None';
+GMAT MountSac.DataSource = 'Constant';
+GMAT MountSac.Temperature = 295.1;
+GMAT MountSac.Pressure = 1013.5;
+GMAT MountSac.Humidity = 55;
+GMAT MountSac.MinimumElevationAngle = 10;
+
+%----------------------------------------
+%---------- GroundStations
+%----------------------------------------
+
+Create GroundStation TexasUni;
+GMAT TexasUni.OrbitColor = Thistle;
+GMAT TexasUni.TargetColor = DarkGray;
+GMAT TexasUni.CentralBody = Mars;
+GMAT TexasUni.StateType = Cartesian;
+GMAT TexasUni.HorizonReference = Sphere;
+GMAT TexasUni.Location1 = -606.333;
+GMAT TexasUni.Location2 = -5460.273;
+GMAT TexasUni.Location3 = 3229.698;
+GMAT TexasUni.Id = 'TexasUni';
+GMAT TexasUni.IonosphereModel = 'None';
+GMAT TexasUni.TroposphereModel = 'None';
+GMAT TexasUni.DataSource = 'Constant';
+GMAT TexasUni.Temperature = 295.1;
+GMAT TexasUni.Pressure = 1013.5;
+GMAT TexasUni.Humidity = 55;
+GMAT TexasUni.MinimumElevationAngle = 10;
+
+%----------------------------------------
+%---------- GroundStations
+%----------------------------------------
+
+Create GroundStation Columbia;
+GMAT Columbia.OrbitColor = Thistle;
+GMAT Columbia.TargetColor = DarkGray;
+GMAT Columbia.CentralBody = Mars;
+GMAT Columbia.StateType = Cartesian;
+GMAT Columbia.HorizonReference = Sphere;
+GMAT Columbia.Location1 = 1335.549;
+GMAT Columbia.Location2 = -4646.589;
+GMAT Columbia.Location3 = 4146.458;
+GMAT Columbia.Id = 'BSGS';
+GMAT Columbia.IonosphereModel = 'None';
+GMAT Columbia.TroposphereModel = 'None';
+GMAT Columbia.DataSource = 'Constant';
+GMAT Columbia.Temperature = 295.1;
+GMAT Columbia.Pressure = 1013.5;
+GMAT Columbia.Humidity = 55;
+GMAT Columbia.MinimumElevationAngle = 10;
+
+%----------------------------------------
+%---------- GroundStations
+%----------------------------------------
+
+Create GroundStation NorthEastern;
+GMAT NorthEastern.OrbitColor = Thistle;
+GMAT NorthEastern.TargetColor = DarkGray;
+GMAT NorthEastern.CentralBody = Mars;
+GMAT NorthEastern.StateType = Cartesian;
+GMAT NorthEastern.HorizonReference = Sphere;
+GMAT NorthEastern.Location1 = 1530.354;
+GMAT NorthEastern.Location2 = -4466.941;
+GMAT NorthEastern.Location3 = 4273.737;
+GMAT NorthEastern.Id = 'BSGS';
+GMAT NorthEastern.IonosphereModel = 'None';
+GMAT NorthEastern.TroposphereModel = 'None';
+GMAT NorthEastern.DataSource = 'Constant';
+GMAT NorthEastern.Temperature = 295.1;
+GMAT NorthEastern.Pressure = 1013.5;
+GMAT NorthEastern.Humidity = 55;
+GMAT NorthEastern.MinimumElevationAngle = 10;
+
+%----------------------------------------
+%---------- GroundStations
+%----------------------------------------
+
+Create GroundStation SantaCruz;
+GMAT SantaCruz.OrbitColor = Thistle;
+GMAT SantaCruz.TargetColor = DarkGray;
+GMAT SantaCruz.CentralBody = Mars;
+GMAT SantaCruz.StateType = Cartesian;
+GMAT SantaCruz.HorizonReference = Sphere;
+GMAT SantaCruz.Location1 = -2707.419;
+GMAT SantaCruz.Location2 = -4324.001;
+GMAT SantaCruz.Location3 = 3815.528;
+GMAT SantaCruz.Id = 'BSGS';
+GMAT SantaCruz.IonosphereModel = 'None';
+GMAT SantaCruz.TroposphereModel = 'None';
+GMAT SantaCruz.DataSource = 'Constant';
+GMAT SantaCruz.Temperature = 295.1;
+GMAT SantaCruz.Pressure = 1013.5;
+GMAT SantaCruz.Humidity = 55;
+GMAT SantaCruz.MinimumElevationAngle = 10;
+
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel DefaultProp_ForceModel;
+GMAT DefaultProp_ForceModel.CentralBody = Earth;
+GMAT DefaultProp_ForceModel.PrimaryBodies = {Earth};
+GMAT DefaultProp_ForceModel.SRP = Off;
+GMAT DefaultProp_ForceModel.RelativisticCorrection = Off;
+GMAT DefaultProp_ForceModel.ErrorControl = RSSStep;
+GMAT DefaultProp_ForceModel.GravityField.Earth.Degree = 4;
+GMAT DefaultProp_ForceModel.GravityField.Earth.Order = 4;
+GMAT DefaultProp_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT DefaultProp_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT DefaultProp_ForceModel.GravityField.Earth.TideModel = 'None';
+GMAT DefaultProp_ForceModel.Drag.AtmosphereModel = MSISE90;
+GMAT DefaultProp_ForceModel.Drag.HistoricWeatherSource = 'ConstantFluxAndGeoMag';
+GMAT DefaultProp_ForceModel.Drag.PredictedWeatherSource = 'ConstantFluxAndGeoMag';
+GMAT DefaultProp_ForceModel.Drag.CSSISpaceWeatherFile = 'SpaceWeather-All-v1.2.txt';
+GMAT DefaultProp_ForceModel.Drag.SchattenFile = 'SchattenPredict.txt';
+GMAT DefaultProp_ForceModel.Drag.F107 = 150;
+GMAT DefaultProp_ForceModel.Drag.F107A = 150;
+GMAT DefaultProp_ForceModel.Drag.MagneticIndex = 3;
+GMAT DefaultProp_ForceModel.Drag.SchattenErrorModel = 'Nominal';
+GMAT DefaultProp_ForceModel.Drag.SchattenTimingModel = 'NominalCycle';
+GMAT DefaultProp_ForceModel.Drag.DragModel = 'Spherical';
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator DefaultProp;
+GMAT DefaultProp.FM = DefaultProp_ForceModel;
+GMAT DefaultProp.Type = RungeKutta89;
+GMAT DefaultProp.InitialStepSize = 60;
+GMAT DefaultProp.Accuracy = 9.999999999999999e-12;
+GMAT DefaultProp.MinStep = 0.001;
+GMAT DefaultProp.MaxStep = 2700;
+GMAT DefaultProp.MaxStepAttempts = 50;
+GMAT DefaultProp.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create ContactLocator ContactLocator1;
+GMAT ContactLocator1.Target = GroundStatSat;
+GMAT ContactLocator1.Filename = 'ContactLocator1.txt';
+GMAT ContactLocator1.InputEpochFormat = 'TAIModJulian';
+GMAT ContactLocator1.InitialEpoch = '21545';
+GMAT ContactLocator1.StepSize = 10;
+GMAT ContactLocator1.FinalEpoch = '21545.138';
+GMAT ContactLocator1.UseLightTimeDelay = true;
+GMAT ContactLocator1.UseStellarAberration = true;
+GMAT ContactLocator1.WriteReport = true;
+GMAT ContactLocator1.RunMode = Automatic;
+GMAT ContactLocator1.UseEntireInterval = true;
+GMAT ContactLocator1.Observers = {BroncoSpace};
+GMAT ContactLocator1.LightTimeDirection = Transmit;
+GMAT ContactLocator1.LeftJustified = false;
+GMAT ContactLocator1.ReportPrecision = 6;
+GMAT ContactLocator1.ReportFormat = 'Legacy';
+GMAT ContactLocator1.IntervalStepSize = 0;
+GMAT ContactLocator1.ReportTimeFormat = 'UTCGregorian';
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView DefaultOrbitView;
+GMAT DefaultOrbitView.SolverIterations = Current;
+GMAT DefaultOrbitView.UpperLeft = [ 0.002097535395909806 0 ];
+GMAT DefaultOrbitView.Size = [ 0.5002621919244887 0.548792270531401 ];
+GMAT DefaultOrbitView.RelativeZOrder = 142;
+GMAT DefaultOrbitView.Maximized = false;
+GMAT DefaultOrbitView.Add = {GroundStatSat, Earth};
+GMAT DefaultOrbitView.CoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.DrawObject = [ true true ];
+GMAT DefaultOrbitView.DataCollectFrequency = 1;
+GMAT DefaultOrbitView.UpdatePlotFrequency = 50;
+GMAT DefaultOrbitView.NumPointsToRedraw = 0;
+GMAT DefaultOrbitView.ShowPlot = true;
+GMAT DefaultOrbitView.MaxPlotPoints = 20000;
+GMAT DefaultOrbitView.ShowLabels = true;
+GMAT DefaultOrbitView.ViewPointReference = Earth;
+GMAT DefaultOrbitView.ViewPointVector = [ 30000 0 0 ];
+GMAT DefaultOrbitView.ViewDirection = Earth;
+GMAT DefaultOrbitView.ViewScaleFactor = 1;
+GMAT DefaultOrbitView.ViewUpCoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.ViewUpAxis = Z;
+GMAT DefaultOrbitView.EclipticPlane = Off;
+GMAT DefaultOrbitView.XYPlane = On;
+GMAT DefaultOrbitView.WireFrame = Off;
+GMAT DefaultOrbitView.Axes = On;
+GMAT DefaultOrbitView.Grid = Off;
+GMAT DefaultOrbitView.SunLine = Off;
+GMAT DefaultOrbitView.UseInitialView = On;
+GMAT DefaultOrbitView.StarCount = 7000;
+GMAT DefaultOrbitView.EnableStars = On;
+GMAT DefaultOrbitView.EnableConstellations = On;
+
+Create GroundTrackPlot DefaultGroundTrackPlot;
+GMAT DefaultGroundTrackPlot.SolverIterations = Current;
+GMAT DefaultGroundTrackPlot.UpperLeft = [ 0.002097535395909806 0.5516908212560386 ];
+GMAT DefaultGroundTrackPlot.Size = [ 0.5002621919244887 0.548792270531401 ];
+GMAT DefaultGroundTrackPlot.RelativeZOrder = 146;
+GMAT DefaultGroundTrackPlot.Maximized = false;
+GMAT DefaultGroundTrackPlot.Add = {GroundStatSat};
+GMAT DefaultGroundTrackPlot.DataCollectFrequency = 1;
+GMAT DefaultGroundTrackPlot.UpdatePlotFrequency = 50;
+GMAT DefaultGroundTrackPlot.NumPointsToRedraw = 0;
+GMAT DefaultGroundTrackPlot.ShowPlot = true;
+GMAT DefaultGroundTrackPlot.MaxPlotPoints = 20000;
+GMAT DefaultGroundTrackPlot.CentralBody = Earth;
+GMAT DefaultGroundTrackPlot.TextureMap = 'ModifiedBlueMarble.jpg';
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Propagate DefaultProp(GroundStatSat) {GroundStatSat.Earth.Altitude = 100.0};
