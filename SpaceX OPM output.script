@@ -1,0 +1,213 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2024-05-30 15:31:39
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft sat1;
+GMAT sat1.DateFormat = UTCGregorian;
+GMAT sat1.Epoch = '01 Jul 2024 19:12:45.287';
+GMAT sat1.CoordinateSystem = EarthMJ2000Eq;
+GMAT sat1.DisplayStateType = ModifiedKeplerian;
+GMAT sat1.RadPer = 6893.041999999999;
+GMAT sat1.RadApo = 6898.122999999996;
+GMAT sat1.INC = 97.43600000000001;
+GMAT sat1.RAAN = 42.12900000000001;
+GMAT sat1.AOP = 291.7149999999874;
+GMAT sat1.TA = 49.35600000001255;
+GMAT sat1.DryMass = 850;
+GMAT sat1.Cd = 2.2;
+GMAT sat1.Cr = 1.8;
+GMAT sat1.DragArea = 15;
+GMAT sat1.SRPArea = 1;
+GMAT sat1.SPADDragScaleFactor = 1;
+GMAT sat1.SPADSRPScaleFactor = 1;
+GMAT sat1.NAIFId = -10000001;
+GMAT sat1.NAIFIdReferenceFrame = -9000001;
+GMAT sat1.OrbitColor = [255 128 192];
+GMAT sat1.TargetColor = Teal;
+GMAT sat1.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT sat1.CdSigma = 1e+70;
+GMAT sat1.CrSigma = 1e+70;
+GMAT sat1.Id = 'SatId';
+GMAT sat1.Attitude = ThreeAxisKinematic;
+GMAT sat1.SPADSRPInterpolationMethod = Bilinear;
+GMAT sat1.SPADSRPScaleFactorSigma = 1e+70;
+GMAT sat1.SPADDragInterpolationMethod = Bilinear;
+GMAT sat1.SPADDragScaleFactorSigma = 1e+70;
+GMAT sat1.ModelFile = 'aura.3ds';
+GMAT sat1.ModelOffsetX = 0;
+GMAT sat1.ModelOffsetY = 0;
+GMAT sat1.ModelOffsetZ = 0;
+GMAT sat1.ModelRotationX = 0;
+GMAT sat1.ModelRotationY = 0;
+GMAT sat1.ModelRotationZ = 0;
+GMAT sat1.ModelScale = 1;
+GMAT sat1.AttitudeDisplayStateType = 'Quaternion';
+GMAT sat1.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT sat1.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT sat1.Q1 = 0.7351210838231096;
+GMAT sat1.Q2 = -0.3182641929963578;
+GMAT sat1.Q3 = 0.4877280892671775;
+GMAT sat1.Q4 = -0.3470247923634592;
+GMAT sat1.EulerAngleSequence = '321';
+GMAT sat1.AngularVelocityX = 0;
+GMAT sat1.AngularVelocityY = 0;
+GMAT sat1.AngularVelocityZ = 0;
+
+Create Spacecraft sat2;
+GMAT sat2.DateFormat = UTCGregorian;
+GMAT sat2.Epoch = '01 Jul 2024 19:12:45.287';
+GMAT sat2.CoordinateSystem = EarthMJ2000Eq;
+GMAT sat2.DisplayStateType = Cartesian;
+GMAT sat2.X = 4642.153066;
+GMAT sat2.Y = 4589.050616;
+GMAT sat2.Z = -2217.489595;
+GMAT sat2.VX = 2.790106;
+GMAT sat2.VY = 0.627263;
+GMAT sat2.VZ = 7.132385;
+GMAT sat2.DryMass = 850;
+GMAT sat2.Cd = 2.2;
+GMAT sat2.Cr = 1.8;
+GMAT sat2.DragArea = 15;
+GMAT sat2.SRPArea = 1;
+GMAT sat2.SPADDragScaleFactor = 1;
+GMAT sat2.SPADSRPScaleFactor = 1;
+GMAT sat2.NAIFId = -10001001;
+GMAT sat2.NAIFIdReferenceFrame = -9001001;
+GMAT sat2.OrbitColor = [128 128 255];
+GMAT sat2.TargetColor = LightGray;
+GMAT sat2.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT sat2.CdSigma = 1e+70;
+GMAT sat2.CrSigma = 1e+70;
+GMAT sat2.Id = 'SatId';
+GMAT sat2.Attitude = ThreeAxisKinematic;
+GMAT sat2.SPADSRPInterpolationMethod = Bilinear;
+GMAT sat2.SPADSRPScaleFactorSigma = 1e+70;
+GMAT sat2.SPADDragInterpolationMethod = Bilinear;
+GMAT sat2.SPADDragScaleFactorSigma = 1e+70;
+GMAT sat2.ModelFile = 'aura.3ds';
+GMAT sat2.ModelOffsetX = 0;
+GMAT sat2.ModelOffsetY = 0;
+GMAT sat2.ModelOffsetZ = 0;
+GMAT sat2.ModelRotationX = 0;
+GMAT sat2.ModelRotationY = 0;
+GMAT sat2.ModelRotationZ = 0;
+GMAT sat2.ModelScale = 1;
+GMAT sat2.AttitudeDisplayStateType = 'Quaternion';
+GMAT sat2.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT sat2.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT sat2.Q1 = 0.7351210838231096;
+GMAT sat2.Q2 = -0.3182641929963578;
+GMAT sat2.Q3 = 0.4877280892671775;
+GMAT sat2.Q4 = -0.3470247923634592;
+GMAT sat2.EulerAngleSequence = '321';
+GMAT sat2.AngularVelocityX = 0;
+GMAT sat2.AngularVelocityY = 0;
+GMAT sat2.AngularVelocityZ = 0;
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel Prop2_ForceModel;
+GMAT Prop2_ForceModel.CentralBody = Earth;
+GMAT Prop2_ForceModel.PrimaryBodies = {Earth};
+GMAT Prop2_ForceModel.Drag = None;
+GMAT Prop2_ForceModel.SRP = Off;
+GMAT Prop2_ForceModel.RelativisticCorrection = Off;
+GMAT Prop2_ForceModel.ErrorControl = RSSStep;
+GMAT Prop2_ForceModel.GravityField.Earth.Degree = 4;
+GMAT Prop2_ForceModel.GravityField.Earth.Order = 4;
+GMAT Prop2_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT Prop2_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT Prop2_ForceModel.GravityField.Earth.TideModel = 'None';
+
+Create ForceModel Prop1_ForceModel;
+GMAT Prop1_ForceModel.CentralBody = Earth;
+GMAT Prop1_ForceModel.PrimaryBodies = {Earth};
+GMAT Prop1_ForceModel.PointMasses = {Luna, Sun};
+GMAT Prop1_ForceModel.Drag = None;
+GMAT Prop1_ForceModel.SRP = Off;
+GMAT Prop1_ForceModel.RelativisticCorrection = Off;
+GMAT Prop1_ForceModel.ErrorControl = None;
+GMAT Prop1_ForceModel.GravityField.Earth.Degree = 4;
+GMAT Prop1_ForceModel.GravityField.Earth.Order = 4;
+GMAT Prop1_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT Prop1_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT Prop1_ForceModel.GravityField.Earth.TideModel = 'None';
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator Prop1;
+GMAT Prop1.FM = Prop1_ForceModel;
+GMAT Prop1.Type = RungeKutta89;
+GMAT Prop1.InitialStepSize = 60;
+GMAT Prop1.Accuracy = 9.999999999999999e-12;
+GMAT Prop1.MinStep = 0.001;
+GMAT Prop1.MaxStep = 2700;
+GMAT Prop1.MaxStepAttempts = 50;
+GMAT Prop1.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView DefaultOrbitView;
+GMAT DefaultOrbitView.SolverIterations = Current;
+GMAT DefaultOrbitView.UpperLeft = [ 0 0 ];
+GMAT DefaultOrbitView.Size = [ 0.5 0.4497041420118343 ];
+GMAT DefaultOrbitView.RelativeZOrder = 809;
+GMAT DefaultOrbitView.Maximized = false;
+GMAT DefaultOrbitView.Add = {sat2, sat1, Earth};
+GMAT DefaultOrbitView.CoordinateSystem = EarthICRF;
+GMAT DefaultOrbitView.DrawObject = [ true true true ];
+GMAT DefaultOrbitView.DataCollectFrequency = 1;
+GMAT DefaultOrbitView.UpdatePlotFrequency = 50;
+GMAT DefaultOrbitView.NumPointsToRedraw = 0;
+GMAT DefaultOrbitView.ShowPlot = true;
+GMAT DefaultOrbitView.MaxPlotPoints = 20000;
+GMAT DefaultOrbitView.ShowLabels = true;
+GMAT DefaultOrbitView.ViewPointReference = Earth;
+GMAT DefaultOrbitView.ViewPointVector = [ 30000 0 0 ];
+GMAT DefaultOrbitView.ViewDirection = Earth;
+GMAT DefaultOrbitView.ViewScaleFactor = 1;
+GMAT DefaultOrbitView.ViewUpCoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.ViewUpAxis = Z;
+GMAT DefaultOrbitView.EclipticPlane = Off;
+GMAT DefaultOrbitView.XYPlane = On;
+GMAT DefaultOrbitView.WireFrame = Off;
+GMAT DefaultOrbitView.Axes = On;
+GMAT DefaultOrbitView.Grid = Off;
+GMAT DefaultOrbitView.SunLine = Off;
+GMAT DefaultOrbitView.UseInitialView = On;
+GMAT DefaultOrbitView.StarCount = 7000;
+GMAT DefaultOrbitView.EnableStars = On;
+GMAT DefaultOrbitView.EnableConstellations = On;
+
+Create GroundTrackPlot DefaultGroundTrackPlot;
+GMAT DefaultGroundTrackPlot.SolverIterations = Current;
+GMAT DefaultGroundTrackPlot.UpperLeft = [ 0 0.4420963651732883 ];
+GMAT DefaultGroundTrackPlot.Size = [ 0.5 0.4497041420118343 ];
+GMAT DefaultGroundTrackPlot.RelativeZOrder = 811;
+GMAT DefaultGroundTrackPlot.Maximized = false;
+GMAT DefaultGroundTrackPlot.Add = {sat1, sat2};
+GMAT DefaultGroundTrackPlot.DataCollectFrequency = 1;
+GMAT DefaultGroundTrackPlot.UpdatePlotFrequency = 50;
+GMAT DefaultGroundTrackPlot.NumPointsToRedraw = 0;
+GMAT DefaultGroundTrackPlot.ShowPlot = true;
+GMAT DefaultGroundTrackPlot.MaxPlotPoints = 20000;
+GMAT DefaultGroundTrackPlot.CentralBody = Earth;
+GMAT DefaultGroundTrackPlot.TextureMap = 'ModifiedBlueMarble.jpg';
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Propagate Prop1(sat1, sat2) {sat1.ElapsedSecs = 12000.0};
