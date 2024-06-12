@@ -73,7 +73,7 @@ GMAT BroncoSpace.DataSource = 'Constant';
 GMAT BroncoSpace.Temperature = 295.1;
 GMAT BroncoSpace.Pressure = 1013.5;
 GMAT BroncoSpace.Humidity = 55;
-GMAT BroncoSpace.MinimumElevationAngle = 10;
+GMAT BroncoSpace.MinimumElevationAngle = 20;
 
 %----------------------------------------
 %---------- GroundStations
@@ -87,7 +87,7 @@ GMAT MountSac.StateType = Cartesian;
 GMAT MountSac.HorizonReference = Sphere;
 GMAT MountSac.Location1 = -2471.289;
 GMAT MountSac.Location2 = -4677.985;
-GMAT MountSac.Location3 = 3550.73;
+GMAT MountSac.Location3 = 3550.74;
 GMAT MountSac.Id = 'MountSac';
 GMAT MountSac.IonosphereModel = 'None';
 GMAT MountSac.TroposphereModel = 'None';
@@ -95,7 +95,7 @@ GMAT MountSac.DataSource = 'Constant';
 GMAT MountSac.Temperature = 295.1;
 GMAT MountSac.Pressure = 1013.5;
 GMAT MountSac.Humidity = 55;
-GMAT MountSac.MinimumElevationAngle = 10;
+GMAT MountSac.MinimumElevationAngle = 20;
 
 %----------------------------------------
 %---------- GroundStations
@@ -107,9 +107,9 @@ GMAT TexasUni.TargetColor = DarkGray;
 GMAT TexasUni.CentralBody = Mars;
 GMAT TexasUni.StateType = Cartesian;
 GMAT TexasUni.HorizonReference = Sphere;
-GMAT TexasUni.Location1 = -606.333;
-GMAT TexasUni.Location2 = -5460.273;
-GMAT TexasUni.Location3 = 3229.698;
+GMAT TexasUni.Location1 = 4798.446;
+GMAT TexasUni.Location2 = 2757.975;
+GMAT TexasUni.Location3 = 3159.781;
 GMAT TexasUni.Id = 'TexasUni';
 GMAT TexasUni.IonosphereModel = 'None';
 GMAT TexasUni.TroposphereModel = 'None';
@@ -117,7 +117,7 @@ GMAT TexasUni.DataSource = 'Constant';
 GMAT TexasUni.Temperature = 295.1;
 GMAT TexasUni.Pressure = 1013.5;
 GMAT TexasUni.Humidity = 55;
-GMAT TexasUni.MinimumElevationAngle = 10;
+GMAT TexasUni.MinimumElevationAngle = 20;
 
 %----------------------------------------
 %---------- GroundStations
@@ -131,15 +131,15 @@ GMAT Columbia.StateType = Cartesian;
 GMAT Columbia.HorizonReference = Sphere;
 GMAT Columbia.Location1 = 1335.549;
 GMAT Columbia.Location2 = -4646.589;
-GMAT Columbia.Location3 = 4146.458;
-GMAT Columbia.Id = 'BSGS';
+GMAT Columbia.Location3 = 6378.178;
+GMAT Columbia.Id = 'Columbia';
 GMAT Columbia.IonosphereModel = 'None';
 GMAT Columbia.TroposphereModel = 'None';
 GMAT Columbia.DataSource = 'Constant';
 GMAT Columbia.Temperature = 295.1;
 GMAT Columbia.Pressure = 1013.5;
 GMAT Columbia.Humidity = 55;
-GMAT Columbia.MinimumElevationAngle = 10;
+GMAT Columbia.MinimumElevationAngle = 20;
 
 %----------------------------------------
 %---------- GroundStations
@@ -153,15 +153,15 @@ GMAT NorthEastern.StateType = Cartesian;
 GMAT NorthEastern.HorizonReference = Sphere;
 GMAT NorthEastern.Location1 = 1530.354;
 GMAT NorthEastern.Location2 = -4466.941;
-GMAT NorthEastern.Location3 = 4273.737;
-GMAT NorthEastern.Id = 'BSGS';
+GMAT NorthEastern.Location3 = 6378.14;
+GMAT NorthEastern.Id = 'NorthEast';
 GMAT NorthEastern.IonosphereModel = 'None';
 GMAT NorthEastern.TroposphereModel = 'None';
 GMAT NorthEastern.DataSource = 'Constant';
 GMAT NorthEastern.Temperature = 295.1;
 GMAT NorthEastern.Pressure = 1013.5;
 GMAT NorthEastern.Humidity = 55;
-GMAT NorthEastern.MinimumElevationAngle = 10;
+GMAT NorthEastern.MinimumElevationAngle = 20;
 
 %----------------------------------------
 %---------- GroundStations
@@ -175,15 +175,16 @@ GMAT SantaCruz.StateType = Cartesian;
 GMAT SantaCruz.HorizonReference = Sphere;
 GMAT SantaCruz.Location1 = -2707.419;
 GMAT SantaCruz.Location2 = -4324.001;
-GMAT SantaCruz.Location3 = 3815.528;
-GMAT SantaCruz.Id = 'BSGS';
+GMAT SantaCruz.Location3 = 3815.507;
+GMAT SantaCruz.Id = 'SantaCruz';
 GMAT SantaCruz.IonosphereModel = 'None';
 GMAT SantaCruz.TroposphereModel = 'None';
 GMAT SantaCruz.DataSource = 'Constant';
 GMAT SantaCruz.Temperature = 295.1;
 GMAT SantaCruz.Pressure = 1013.5;
 GMAT SantaCruz.Humidity = 55;
-GMAT SantaCruz.MinimumElevationAngle = 10;
+GMAT SantaCruz.MinimumElevationAngle = 20;
+
 
 
 %----------------------------------------
@@ -243,7 +244,7 @@ GMAT ContactLocator1.UseStellarAberration = true;
 GMAT ContactLocator1.WriteReport = true;
 GMAT ContactLocator1.RunMode = Automatic;
 GMAT ContactLocator1.UseEntireInterval = true;
-GMAT ContactLocator1.Observers = {BroncoSpace};
+GMAT ContactLocator1.Observers = {BroncoSpace, Columbia, MountSac, NorthEastern, SantaCruz, TexasUni};
 GMAT ContactLocator1.LightTimeDirection = Transmit;
 GMAT ContactLocator1.LeftJustified = false;
 GMAT ContactLocator1.ReportPrecision = 6;
@@ -257,9 +258,9 @@ GMAT ContactLocator1.ReportTimeFormat = 'UTCGregorian';
 
 Create OrbitView DefaultOrbitView;
 GMAT DefaultOrbitView.SolverIterations = Current;
-GMAT DefaultOrbitView.UpperLeft = [ 0.002097535395909806 0 ];
-GMAT DefaultOrbitView.Size = [ 0.5002621919244887 0.548792270531401 ];
-GMAT DefaultOrbitView.RelativeZOrder = 142;
+GMAT DefaultOrbitView.UpperLeft = [ 0.001921844971172326 0 ];
+GMAT DefaultOrbitView.Size = [ 0.5003203074951954 0.5485164394546913 ];
+GMAT DefaultOrbitView.RelativeZOrder = 32;
 GMAT DefaultOrbitView.Maximized = false;
 GMAT DefaultOrbitView.Add = {GroundStatSat, Earth};
 GMAT DefaultOrbitView.CoordinateSystem = EarthMJ2000Eq;
@@ -289,9 +290,9 @@ GMAT DefaultOrbitView.EnableConstellations = On;
 
 Create GroundTrackPlot DefaultGroundTrackPlot;
 GMAT DefaultGroundTrackPlot.SolverIterations = Current;
-GMAT DefaultGroundTrackPlot.UpperLeft = [ 0.002097535395909806 0.5516908212560386 ];
-GMAT DefaultGroundTrackPlot.Size = [ 0.5002621919244887 0.548792270531401 ];
-GMAT DefaultGroundTrackPlot.RelativeZOrder = 146;
+GMAT DefaultGroundTrackPlot.UpperLeft = [ 0.001921844971172326 0.5509222133119487 ];
+GMAT DefaultGroundTrackPlot.Size = [ 0.5003203074951954 0.5485164394546913 ];
+GMAT DefaultGroundTrackPlot.RelativeZOrder = 91;
 GMAT DefaultGroundTrackPlot.Maximized = false;
 GMAT DefaultGroundTrackPlot.Add = {GroundStatSat};
 GMAT DefaultGroundTrackPlot.DataCollectFrequency = 1;
@@ -308,4 +309,4 @@ GMAT DefaultGroundTrackPlot.TextureMap = 'ModifiedBlueMarble.jpg';
 %----------------------------------------
 
 BeginMissionSequence;
-Propagate DefaultProp(GroundStatSat) {GroundStatSat.Earth.Altitude = 100.0};
+Propagate DefaultProp(GroundStatSat) {GroundStatSat.Earth.Altitude = 100};
